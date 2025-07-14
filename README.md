@@ -7,7 +7,12 @@ This project demonstrates how to:
 - Test that your database and table exist
 - Automate tests with GitHub Actions
 
----
+**Note:** Depending on your system and Python version, you might need to use `python3` and `pip3` instead of `python` and `pip`. For example:
+
+```
+python3 main.py
+pip3 install -r requirements.txt
+```
 
 ## Project Structure
 
