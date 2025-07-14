@@ -1,7 +1,5 @@
 # SQLite Python Demo
 
-# SQLite Python Demo
-
 This project demonstrates how to:
 
 - Connect Python to an SQLite database
