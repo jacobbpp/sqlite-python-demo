@@ -1,6 +1,10 @@
 import sqlite3
 
 def create_connection(db_file):
+    """
+    Create a connection to the SQLite database specified by db_file.
+    If the database does not exist, it will be created.
+    """
     conn = None
     try:
         conn = sqlite3.connect(db_file)
@@ -11,6 +15,9 @@ def create_connection(db_file):
     return conn
 
 def create_table(conn):
+    """
+    Create a table named 'users' if it doesn't already exist.
+    """
     sql_create_table = """
     CREATE TABLE IF NOT EXISTS users (
         id integer PRIMARY KEY,
@@ -22,6 +29,10 @@ def create_table(conn):
     print("Table created.")
 
 def insert_user(conn, name):
+    """
+    Insert a new user into the users table.
+    Returns the ID of the newly inserted user.
+    """
     sql = ''' INSERT INTO users(name) VALUES(?) '''
     cursor = conn.cursor()
     cursor.execute(sql, (name,))
